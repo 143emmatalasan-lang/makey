@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+   <html lang="en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact</title>
+
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-image: url("8.jpg");
+            background-position: center;
+            color: black;
+			 background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size:80%;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 50px; 
+			transform: translateY(-3px);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: Black;
+            padding: 10px 20px;
+			background-color:lightgreen;
+				
+        }
+		 
+		nav a:hover {
+            background:red;
+            transform: translateY(-3px);
+			
+		}
+
+        .container {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+
+        /* Main Content */
+        .container {
+            height: 50vh;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            text-align: center;
+			 padding: 50px;
+            backdrop-filter: blur(3px);
+			
+        }
+			
+		nav a:hover {
+            background:red;
+            transform: translateY(-3px);
+	    
+		}
+
+       
+        .contact-container {
+            width: 90%;
+            max-width: 700px;
+            margin: 60px auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: Black;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        button {
+            display: block;
+            margin: 5px auto 0;
+            padding: 13px 35px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #50aee8, #9146d8);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+		<a href="Product.html">Product</a>
+		<a href="login form.html">Login Form</a>
+    </nav>
+
+    <div class="contact-container">
+
+        <h2>Contact Us</h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Message</label>
+            <textarea id="message" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+	<footer>
+	<h1> yourmakeyy</h1>
+	</footer>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+
+            alert("Thank you! Your message has been submitted.");
+
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
+
+</body>
+<html>
